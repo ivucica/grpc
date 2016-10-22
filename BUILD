@@ -2536,3 +2536,53 @@ objc_library(
     "//external:protobuf_objc",
   ],
 )
+
+cc_binary(
+    name = "grpc_cli",
+    srcs = [
+        "test/cpp/util/grpc_cli.cc",
+    ],
+    deps = [
+        ":grpc_cli_libs",
+        ":grpc++_reflection",
+        ":grpc++",
+        ":grpc",
+        ":gpr",
+        ":grpc++_test_config",
+    ],
+)
+
+cc_library(
+    name = "grpc_cli_libs",
+    hdrs = [
+        "test/cpp/util/cli_call.h",
+        "test/cpp/util/cli_credentials.h",
+        "test/cpp/util/config_grpc_cli.h",
+        "test/cpp/util/grpc_tool.h",
+        "test/cpp/util/proto_file_parser.h",
+        "test/cpp/util/proto_reflection_descriptor_database.h",
+        "test/cpp/util/service_describer.h",
+    ],
+    srcs = [
+        "test/cpp/util/cli_call.cc",
+        "test/cpp/util/cli_credentials.cc",
+        "test/cpp/util/grpc_tool.cc",
+        "test/cpp/util/proto_file_parser.cc",
+        "test/cpp/util/proto_reflection_descriptor_database.cc",
+        "test/cpp/util/service_describer.cc",
+    ],
+    deps = [
+        ":grpc++_reflection",
+        ":grpc++",
+    ],
+)
+
+cc_library(
+    name = "grpc++_test_config",
+    hdrs = [
+        "test/cpp/util/test_config.h",
+    ],
+    srcs = [
+        "test/cpp/util/test_config_cc.cc",
+    ],
+)
