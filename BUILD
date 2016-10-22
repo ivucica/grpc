@@ -151,7 +151,6 @@ cc_library(
   ],
   includes = [
     "include",
-    ".",
   ],
   deps = [
   ],
@@ -549,7 +548,6 @@ cc_library(
   ],
   includes = [
     "include",
-    ".",
   ],
   deps = [
     "//external:libssl",
@@ -914,7 +912,6 @@ cc_library(
   ],
   includes = [
     "include",
-    ".",
   ],
   deps = [
     "//external:libssl",
@@ -1260,7 +1257,6 @@ cc_library(
   ],
   includes = [
     "include",
-    ".",
   ],
   deps = [
     ":gpr",
@@ -1418,7 +1414,6 @@ cc_library(
   ],
   includes = [
     "include",
-    ".",
   ],
   deps = [
     "//external:libssl",
@@ -1495,7 +1490,6 @@ cc_library(
   ],
   includes = [
     "include",
-    ".",
   ],
   deps = [
     ":grpc++",
@@ -1640,7 +1634,6 @@ cc_library(
   ],
   includes = [
     "include",
-    ".",
   ],
   deps = [
     "//external:protobuf_clib",
@@ -1684,7 +1677,6 @@ cc_library(
   ],
   includes = [
     "include",
-    ".",
   ],
   deps = [
     "//external:protobuf_compiler",
@@ -1702,7 +1694,6 @@ cc_library(
   ],
   includes = [
     "include",
-    ".",
   ],
   deps = [
     ":grpc",
@@ -1820,7 +1811,6 @@ objc_library(
   ],
   includes = [
     "include",
-    ".",
   ],
   deps = [
   ],
@@ -2218,7 +2208,6 @@ objc_library(
   ],
   includes = [
     "include",
-    ".",
   ],
   deps = [
     ":gpr_objc",
