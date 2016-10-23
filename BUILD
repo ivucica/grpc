@@ -1312,6 +1312,9 @@ cc_library(
     "include/grpc/impl/codegen/sync_posix.h",
     "include/grpc/impl/codegen/sync_windows.h",
     "include/grpc/census.h",
+    "//third_party/nanopb:pb.h",
+    "//third_party/nanopb:pb_decode.h",
+    "//third_party/nanopb:pb_encode.h",
   ],
   includes = [
     "include",
@@ -1517,6 +1520,10 @@ cc_library(
     "src/cpp/util/string_ref.cc",
     "src/cpp/util/time_cc.cc",
     "src/cpp/codegen/codegen_init.cc",
+    "src/core/lib/security/transport/security_connector.h",
+    "src/core/lib/tsi/transport_security_interface.h",
+    "src/core/lib/security/context/security_context.h",
+    "src/core/lib/security/credentials/credentials.h",
   ],
   hdrs = [
     "include/grpc++/alarm.h",
@@ -1606,6 +1613,7 @@ cc_library(
     "include/grpc/impl/codegen/sync_generic.h",
     "include/grpc/impl/codegen/sync_posix.h",
     "include/grpc/impl/codegen/sync_windows.h",
+    "include/grpc/grpc_security.h",
   ],
   includes = [
     "include",
